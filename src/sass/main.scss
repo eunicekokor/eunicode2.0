@@ -1,0 +1,85 @@
+$easing: cubic-bezier(.32,.06,.17,.89);
+$duration: 1s;
+$stagger: 0.2s;
+$step: 0.1;
+$colors:rgb(255,102,102),rgb(255,153,153),rgb(255,204,204);
+$num_boxes: 12;
+
+.name{
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+}
+#name {
+  font-size: 4rem;
+  font-family: 'Archivo Black', sans-serif;
+  line-height: 3.5rem;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+#tag {
+  font-family: 'Josefin Sans', sans-serif;
+}
+#tag2{
+  font-family: 'Abel', sans-serif;
+}
+
+#tag3{
+  font-family: 'Archivo Black', sans-serif;
+}
+
+#tag4{
+  font-family: 'Carrois Gothic', sans-serif;
+}
+
+#tag2,#tag3,#tag4,#tag{
+  margin-top: 1rem;
+  font-size: 1.3rem;
+  line-height: 1.3rem;
+  text-align: right;
+  text-transform: lowercase;
+}
+
+body{
+  background: rgba(255,0,0,0.5);
+
+}
+
+.box{
+  transform: translateY(-100%);
+  $dur: random(10);
+  $duration: $dur + s;
+  animation: up-down $duration $easing both infinite;
+  width: ((100%/$num_boxes)-1);
+  height: 50px;
+  background-color: nth($colors, random(3));
+  float:left;
+  margin-left: 1%;
+
+  @for $i from 1 through $num_boxes+2 {
+    &:nth-child(#{$i}) {
+      animation-delay: $stagger * ($i - 1);
+
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+  color: rgb(255,204,204);
+}
+
+a:hover{
+  color: white;
+  border-bottom: solid rgb(255,204,204) 5px;
+  padding-bottom: 5px;
+}
+@keyframes up-down {
+  from, 75%, to {
+    transform: translateY(-200%);
+  }
+  25%,50% {
+    transform: translateY(1700%);
+  }
+}
