@@ -4,43 +4,55 @@ $content-width: 58.75rem;
   @include clearfix;
   margin: 0 auto;
   max-width: $content-width;
-  padding: 0 0.625rem;
+  padding: 0 .625rem;
   width: 90%;
 }
 
-.grid-container{
-    @include clearfix;
-    width: 100%;
-    max-width: 1200px;
+.grid-container {
+  @include clearfix;
+  max-width: 1200px;
+  width: 100%;
 }
 
-/*-- our cleafix hack -- */
-.row:before,
-.row:after {
-    content:"";
-      display: table ;
-    clear:both;
+//-- our cleafix hack -- //
+.row::before,
+.row::after {
+  clear: both;
+  content: '';
+  display: table;
 }
 
 [class*='col-'] {
-    float: left;
-    min-height: 1px;
-    width: 16.66%;
-    /*-- our gutter -- */
+  float: left;
+  min-height: 1px;
+  width: 16.66%;
+  //-- our gutter -- //
     // background-color: #FFDCDC;
+  }
+
+.col-1 {
+  width: 16.66%;
 }
 
-.col-1{ width: 16.66%; }
-.col-2{ width: 33.33%; }
-.col-3{ width: 50%;    }
-.col-4{ width: 66.66%; }
-.col-5{ width: 83.33%; }
-.col-6{ width: 100%;   }
-
-.outline, .outline *{
-    outline: 1px solid #F6A1A1;
+.col-2 {
+  width: 33.33%;
 }
 
+.col-3 {
+  width: 50%;
+}
+
+.col-4 {
+  width: 66.66%;
+}
+
+.col-5 {
+  width: 83.33%;
+}
+
+.col-6 {
+  width: 100%;
+}
 
 @media screen and (max-width: $phone-landscape-max) {
   .content {
@@ -54,19 +66,37 @@ $content-width: 58.75rem;
   }
 }
 
-@media all and (max-width:800px){
-        .col-1{ width: 100%;    }
-        .col-2{ width: 100%;        }
-        .col-3{ width: 100%;    }
-        .col-4{ width: 100%;    }
-        .col-5{ width: 100%;    }
-        .col-6{ width: 100%;      }
+@media all and (max-width:800px) {
+  .col-1 {
+    width: 100%;
+  }
 
-        .row .col-2:last-of-type{
-            width: 100%;
-        }
+  .col-2 {
+    width: 100%;
+   }
 
-        .row .col-5 ~ .col-1{
-            width: 100%;
-        }
-    }
+  .col-3 {
+    width: 100%;
+  }
+
+  .col-4 {
+    width: 100%;
+  }
+
+  .col-5 {
+    width: 100%;
+  }
+
+  .col-6 {
+    width: 100%;
+  }
+
+  .row .col-2:last-of-type {
+    width: 100%;
+  }
+
+  .row .col-5 ~ .col-1 {
+    width: 100%;
+  }
+
+}

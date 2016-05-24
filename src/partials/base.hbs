@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8" />
-  <title>DevFest 2016</title>
+  <title>{{ meta.title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="{{ meta.description }}" />
     <meta name="robots" content="index, follow" />
@@ -32,11 +32,15 @@
 
   <!-- Chrome Theme Color -->
   <link rel="stylesheet" type="text/css" href="/css/style.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="/js/script.js"></script>
+  <script src="/js/jquery.color.js"></script>
 
 
 </head>
 <body>
-        <div class="box"></div>
+
+  <div class="box"></div>
   <div class="box"></div>
   <div class="box"></div>
   <div class="box"></div>
@@ -50,8 +54,9 @@
   <div class="box"></div>
 
   <div class="name">
-    <div id="name">eunice<br> kokor</div>
-    <div id="tag4"><a id="eat" href="https://foursquare.com/eunicekokor/lists/created">eat</a> • <a id="write" href="https://medium.com/@eunicekokor">write</a> • <a id="code" href="https://github.com/eunicekokor">code</a></div>
+    <div class="tag5">  <a class="mini" id="clickme" title="click me!" href="javascript:void(0);"> random! </a> <a class="mini" id="slow" href="javascript:void(0);"> slower </a> <a class="mini" id="fast" href="javascript:void(0);"> faster </a> <a class="mini" id="norm" href="javascript:void(0);"> normal </a></div>
+    <div class="name-title">eunice<br> kokor</div>
+    <div class="tag4"><a class="page" id="eat" href="https://foursquare.com/eunicekokor/lists/created">eat.</a>  <a class="page" id="write" href="https://medium.com/@eunicekokor">write.</a>  <a class="page" id="code" href="https://github.com/eunicekokor">code.</a></div>
   </div>
 </body>
 </html>

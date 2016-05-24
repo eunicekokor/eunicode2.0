@@ -82,7 +82,7 @@ gulp.task('js:lint', function() {
     .pipe(jshint.reporter('default'));
 });
 
-gulp.task('js', ['js:build']);
+gulp.task('js', ['js:lint', 'js:build']);
 
 gulp.task('images', function() {
   gulp.src('src/img/**/*')
@@ -153,9 +153,9 @@ gulp.task('build:optimized', ['sass:optimized', 'images:optimized', 'fonts', 'js
 
 gulp.task('deploy', ['build:optimized'], function() {
   gulp.src('')
-    .pipe(shell('scp -r dist/* https://git.heroku.com/eek-website.git'))
+    .pipe(shell('scp -r dist/* root@eunicode:../var/www/html'))
     .on('finish', function() {
-      process.stdout.write('Deployed to devfe.st/');
+      process.stdout.write('Deployed to http://eunicod.es/');
     });
 });
 
