@@ -14,56 +14,92 @@ $num-boxes: 12;
 
 .name {
   bottom: 5%;
+  min-width: 350px;
   position: absolute;
   right: 5%;
-  float: right;
+  width: 30vw;
+}
+
+.stylefix {
+  font-size: 0.75rem;
 }
 
 .name-title {
   font-family: 'Archivo Black', sans-serif;
-  font-size: 4rem;
-  line-height: 3.5rem;
-  text-align: left;
-  text-transform: uppercase;
+  font-size: 5rem;
+  left: 0;
+  line-height: 4.3rem;
   margin: 0;
   padding: 0;
-  left: 0;
+  text-align: left;
+  text-transform: uppercase;
 }
 
-.tag {
+.text-contain {
+  // background-color: $green;
+  display: none;
+  float: left;
+  height: 50vh;
+  left: 5vw;
+  margin-left: 1%;
+  min-width: 515px;
+  position: absolute;
+  top: 5vh;
+  width: 50vw;
+}
+
+.font1 {
   font-family: 'Josefin Sans', sans-serif;
 }
 
-.tag2 {
-  font-family: 'Abel', sans-serif;
+.font2 {
+   font-family: 'Abel', sans-serif;
 }
 
-.tag3 {
+.font3 {
   font-family: 'Archivo Black', sans-serif;
 }
 
-.tag4,
-.tag5 {
+.font4 {
   font-family: 'Carrois Gothic', sans-serif;
 }
 
-.tag5{
-  font-size: .5rem;
-  line-height: 1.3rem;
-  margin: .25rem 0;
+.tag5 {
+  float: left;
+  font-size: 1.35rem;
+  line-height: 2.3rem;
+  margin: 0;
+  padding: 0;
   text-align: left;
   text-transform: lowercase;
 }
 
-.tag2,
-.tag3,
-.tag4,
-.tag,{
-  font-size: 1.2rem;
-  line-height: 1.3rem;
-  margin-top: .75rem;
+.tag4 {
+  font-size: 2.2rem;
+  line-height: 2.3rem;
+  margin: 0;
+  margin-top: 1rem;
+  padding: 0;
   text-align: left;
   text-transform: lowercase;
+}
+
+a.hover:hover {
+  background: $trans-black;
+  // border-bottom: solid 5px;
+  // border-color: $trans-black;
+  // border-bottom: none;
+  color: $white;
+  transition: 0.25s;
+}
+
+a.hover {
+  margin: 0;
+  padding: 0;
+  margin: .5rem .2rem;
+  margin-top: .5rem;
+  padding: .4rem;
+
 }
 
 .container1,
@@ -89,13 +125,13 @@ body {
 
 .box {
   // animation: up-down $duration $easing both infinite;
-  animation-name: up-down;
   animation-duration: $duration;
   animation-iteration-count: infinite;
+  animation-name: up-down;
   animation-timing-function: $easing;
   background-color: $lightpink;
   float: left;
-  height: 50px;
+  height: 10vh;
   margin-left: 1%;
   transform: translateY(-100%);
   width: ((100% / $num-boxes) - 1);
@@ -111,29 +147,25 @@ body {
 a {
   color: $trans-black;
   text-decoration: none;
-  padding: 5px
 }
 
-a:hover {
-  background: $trans-black;
-  // border-bottom: solid 5px;
-  // border-color: $trans-black;
-  // border-bottom: none;
-  border-radius: 3.5px;
-  color: $white;
-  transition: .5s;
-  -webkit-transition: .5s;
+.nohover {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $trans-black;
+  font-size: 0.3rem;
   padding: 5px;
-
 }
 
 @keyframes up-down {
   from, 75%, to {
     transform: translateY(-200%);
+    opacity: 0.95;
   }
 
   25%,50% {
     bottom: -100%;
-    transform: translateY(2000%);
+    transform: translateY(900%);
+    opacity: 0.05;
   }
 }

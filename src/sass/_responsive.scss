@@ -52,6 +52,15 @@
   body {
     font-size: 12px;
   }
+
+  .name {
+    float: top;
+    height: 40vh;
+    min-width: 80vw;
+    right: 10%;
+    top: 15%;
+    width: 80vw;
+  }
 }
 
 @media screen and (max-width: $flip-phone-max) {

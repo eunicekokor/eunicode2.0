@@ -12,59 +12,63 @@ $(document).ready(function() {
   var transteal = 'rgba(0, 255, 255, .5)';
   var transblack = 'rgba(255, 255, 255, .5)';
   var transyellow = 'rgba(255, 255, 0, .5)';
+  var trans = 'rgba(0, 0, 0, 0)';
   var green = '#008000';
   var yellow = '#ff0';
+  var inactive = '1.35rem';
+  var active = '2.0rem';
 
   var colorList = [transyellow, transblack, transteal, transpurp, transgreen, transred];
   var boxList = [lightpink, darkpink, lightpink, mediumpink, lightpink, darkpink];
   var titleList = [black, black, white, white, black, white];
-  var accentList = [gray, darkpink, black, black, white, black];
-  var wordOrder = ['<a class="page" id="eat" href="https://foursquare.com/eunicekokor/lists/created">eat.</a>  <a class="page" id="write" href="https://medium.com/@eunicekokor">write.</a>  <a class="page" id="code" href="https://github.com/eunicekokor">code.</a>', '<a class="page" id="eat" href="https://foursquare.com/eunicekokor/lists/created">eat.</a> <a class="page" id="code" href="https://github.com/eunicekokor">code.</a> <a class="page" id="write" href="https://medium.com/@eunicekokor">write.</a>', '<a class="page" id="write" href="https://medium.com/@eunicekokor">write.</a> <a class="page" id="eat" href="https://foursquare.com/eunicekokor/lists/created">eat.</a> <a class="page" id="code" href="https://github.com/eunicekokor">code.</a>', '<a class="page" id="write" href="https://medium.com/@eunicekokor">write.</a> <a class="page" id="code" href="https://github.com/eunicekokor">code.</a> <a class="page" id="eat" href="https://foursquare.com/eunicekokor/lists/created">eat.</a>'];
+  var accentList = [darkpink, darkpink, black, black, white, black];
+
   var rand = Math.floor(Math.random() * colorList.length);
-  var randOrder = Math.floor(Math.random() * wordOrder.length);
-  console.log(randOrder);
 
   $('body').css('background-color', colorList[rand]);
   $('a').css('color', accentList[rand]);
+  $('.nohover').animate({color: accentList[rand]}, 'slow');
   $('.name-title').css('color', titleList[rand]);
   $('.box').css('background-color', boxList[rand]);
 
   getNew();
+  onClickFxns();
 
-  $('#clickme').click(function() {
-    getNew();
+  $('#resume').animate({'font-size': active}, 1000, function() {
+    setTimeout(function() {
+      $('#dist-free').animate({'font-size': active}, 1500);
+      $('#resume').animate({'font-size': inactive}, 1500, function() {
+        pause();
+        setTimeout(function() {
+          $('#dist-free').animate({'font-size': inactive}, 1000);
+          $('#resume').animate({'font-size': active}, 1000, function() {
+            resume();
+          });
+        }, 2000);
+      });
+    }, 2000);
   });
 
-  $('#slow').click(function() {
-    var x = document.getElementsByClassName('box');
+  $('#norm').animate({'font-size': active}, 1000, function() {
+    setTimeout(function() {
+      $('#slow').animate({'font-size': active}, 1500);
+      $('#norm').animate({'font-size': inactive}, 1500, function() {
+        slow();
+        setTimeout(function() {
+          $('#slow').animate({'font-size': inactive}, 1000);
+          $('#fast').animate({'font-size': active}, 1000, function() {
+            fast();
+          });
+        }, 2000);
 
-    var i;
-    for (i = 0; i < x.length; i++) {
-      x[i].style.animationDuration = '9s';
-    }
-  });
-
-  $('#fast').click(function() {
-    var x = document.getElementsByClassName('box');
-
-    var i;
-    for (i = 0; i < x.length; i++) {
-      x[i].style.animationDuration = '2s';
-    }
-  });
-
-  $('.mini').click(function() {
-    $('.mini').css({'font-size': '.5rem'});
-    $(this).animate({'font-size': '1.6rem'}, 500);
-  });
-
-  $('#norm').click(function() {
-    var x = document.getElementsByClassName('box');
-
-    var i;
-    for (i = 0; i < x.length; i++) {
-      x[i].style.animationDuration = '5s';
-    }
+        setTimeout(function() {
+          $('#fast').animate({'font-size': inactive}, 1000);
+          $('#norm').animate({'font-size': active}, 1000, function() {
+            norm();
+          });
+        }, 4000);
+      });
+    }, 7500);
   });
 
   $('.name-title').mouseenter(function() {
@@ -79,11 +83,89 @@ $(document).ready(function() {
     var rand = Math.floor(Math.random() * colorList.length);
     $('body').animate(
       {backgroundColor: colorList[rand]}, 'slow'
-    );
+      );
     $('a').animate({color: accentList[rand]}, 'slow');
+    $('.nohover').animate({color: accentList[rand]}, 'slow');
 
     $('.name-title').css('color', titleList[rand]);
     $('.box').css('background-color', boxList[rand]);
+  }
+
+  function pause() {
+    $('.box').each(function(index) {
+      this.style.webkitAnimationPlayState = 'paused';
+    });
+  }
+
+  function resume() {
+    $('.box').each(function(index) {
+      this.style.webkitAnimationPlayState = 'running';
+    });
+  }
+
+  function slow() {
+    $('.box').each(function(index) {
+      this.style.animationDuration = '9s';
+    });
+  }
+
+  function fast() {
+    $('.box').each(function(index) {
+      this.style.animationDuration = '2s';
+    });
+  }
+
+  function norm() {
+    $('.box').each(function(index) {
+      this.style.animationDuration = '5s';
+    });
+  }
+
+  function onClickFxns() {
+    $('#clickme').click(function() {
+      getNew();
+    });
+
+    $('#slow').click(function() {
+      $('.box').each(function(index) {
+        this.style.animationDuration = '9s';
+      });
+    });
+
+    $('#fast').click(function() {
+      $('.box').each(function(index) {
+        this.style.animationDuration = '2s';
+      });
+    });
+
+    $('.mini').click(function() {
+      $('.mini').css({'font-size': inactive});
+      $(this).animate({'font-size': active}, 100);
+    });
+
+    $('.mini2').click(function() {
+      $('.mini2').css({'font-size': inactive});
+      $(this).animate({'font-size': active}, 100);
+    });
+
+    $('#norm').click(function() {
+      $('.box').each(function(index) {
+        this.style.animationDuration = '5s';
+      });
+    });
+
+    $('#resume').click(function() {
+      $('.box').each(function(index) {
+        this.style.webkitAnimationPlayState = 'running';
+      });
+    });
+
+    $('#dist-free').click(function() {
+      $('.box').each(function(index) {
+        this.style.webkitAnimationPlayState = 'paused';
+      });
+    });
+
   }
 
 });

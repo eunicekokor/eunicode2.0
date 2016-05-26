@@ -3,26 +3,26 @@
 <head>
   <meta charset="utf-8" />
   <title>{{ meta.title }}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="{{ meta.description }}" />
-    <meta name="robots" content="index, follow" />
-    <meta itemprop="name" content="{{ meta.title }}">
-    <meta itemprop="description" content="{{ meta.description }}">
-    <meta itemprop="image" content="{{ meta.image }}">
-    <!-- Twitter Card data -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="{{ meta.twitter_handle }}">
-    <meta name="twitter:title" content="{{ meta.title }}">
-    <meta name="twitter:description" content="{{ meta.description }}">
-    <meta name="twitter:creator" content="{{ meta.twitter_handle }}">
-    <meta name="twitter:image:src" content="{{ meta.twitter_image }}">
-    <meta name="twitter:domain" content="{{ meta.domain }}">
-    <!-- Open Graph data (Facebook) -->
-    <meta property="og:title" content="{{ meta.title }}" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="{{ meta.url }}/" />
-    <meta property="og:image" content="{{ meta.facebook_image }}" />
-    <meta property="og:description" content="{{ meta.description }}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="{{ meta.description }}" />
+  <meta name="robots" content="index, follow" />
+  <meta itemprop="name" content="{{ meta.title }}">
+  <meta itemprop="description" content="{{ meta.description }}">
+  <meta itemprop="image" content="{{ meta.image }}">
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="{{ meta.twitter_handle }}">
+  <meta name="twitter:title" content="{{ meta.title }}">
+  <meta name="twitter:description" content="{{ meta.description }}">
+  <meta name="twitter:creator" content="{{ meta.twitter_handle }}">
+  <meta name="twitter:image:src" content="{{ meta.twitter_image }}">
+  <meta name="twitter:domain" content="{{ meta.domain }}">
+  <!-- Open Graph data (Facebook) -->
+  <meta property="og:title" content="{{ meta.title }}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="{{ meta.url }}/" />
+  <meta property="og:image" content="{{ meta.facebook_image }}" />
+  <meta property="og:description" content="{{ meta.description }}" />
   <!-- Standard Icons -->
   <link rel="icon" type="image/png" href="/img/favicon/favicon-196x196.png" sizes="196x196" />
   <link rel="icon" type="image/png" href="/img/favicon/favicon-96x96.png" sizes="96x96" />
@@ -32,9 +32,11 @@
 
   <!-- Chrome Theme Color -->
   <link rel="stylesheet" type="text/css" href="/css/style.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Carrois+Gothic|Archivo+Black|Abel|Josefin+Sans' rel='stylesheet' type='text/css'>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
   <script src="/js/script.js"></script>
   <script src="/js/jquery.color.js"></script>
+
 
 
 </head>
@@ -53,10 +55,26 @@
   <div class="box"></div>
   <div class="box"></div>
 
-  <div class="name">
-    <div class="tag5">  <a class="mini" id="clickme" title="click me!" href="javascript:void(0);"> random! </a> <a class="mini" id="slow" href="javascript:void(0);"> slower </a> <a class="mini" id="fast" href="javascript:void(0);"> faster </a> <a class="mini" id="norm" href="javascript:void(0);"> normal </a></div>
-    <div class="name-title">eunice<br> kokor</div>
-    <div class="tag4"><a class="page" id="eat" href="https://foursquare.com/eunicekokor/lists/created">eat.</a>  <a class="page" id="write" href="https://medium.com/@eunicekokor">write.</a>  <a class="page" id="code" href="https://github.com/eunicekokor">code.</a></div>
+  <div class="text-contain">
+    <p class="font1">hello world! I'm Eunice</p>
+    <p class="font2">hello world! I'm Eunice</p>
+    <p class="font3">hello world! I'm Eunice</p>
+    <p class="font4">hello world! I'm Eunice</p>
   </div>
-</body>
-</html>
+
+
+  <div class="name">
+  <div class="tag5 font1"> <p style="font-size: .75rem" class="nohover stylefix" href="javascript:void(0);">[settings] </p>
+      <a class="mini2 hover hide-mobile" id="dist-free" href="javascript:void(0);"> pause </a>
+      <a class="mini2 hover hide-mobile" id="resume" href="javascript:void(0);"> play </a>
+      <br>
+      <a class="mini hover" id="clickme" title="click me!" href="javascript:void(0);"> randomize! </a>
+      <a class="mini hover hide-mobile" id="slow" href="javascript:void(0);"> slow </a>
+      <a class="mini hover hide-mobile" id="fast" href="javascript:void(0);"> fast </a>
+      <a class="mini hover hide-mobile" id="norm" href="javascript:void(0);"> normal </a>
+  </div>
+      <div class="name-title">eunice<br> kokor</div>
+      <div class="tag4 font1"><a class="page hover" id="eat" href="https://foursquare.com/eunicekokor/list/todos">eat.</a>  <a class="page hover" id="write" href="https://medium.com/@eunicekokor">write.</a>  <a class="page hover" id="code" href="https://github.com/eunicekokor">code.</a></div>
+    </div>
+  </body>
+  </html>
