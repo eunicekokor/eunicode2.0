@@ -12,12 +12,17 @@ $nth-color: nth($colors, $color-key);
 $nth-bg: nth($backgrounds, $bg-key);
 $num-boxes: 12;
 
+
+.hide {
+  display: none;
+}
 .name {
-  bottom: 5%;
-  min-width: 350px;
-  position: absolute;
+  top: 15%;
+  // background: $yellow;
+  min-width: 35vw;
+  position: fixed;
   right: 5%;
-  width: 30vw;
+  width: 35vw;
 }
 
 .stylefix {
@@ -29,23 +34,24 @@ $num-boxes: 12;
   font-size: 5rem;
   left: 0;
   line-height: 4.3rem;
-  margin: 0;
+  margin: 0.5rem 0.4rem;
   padding: 0;
-  text-align: left;
+  vertical-align: center;
   text-transform: uppercase;
+  width: 30vw;
 }
 
 .text-contain {
   // background-color: $green;
-  display: none;
+  // display: none;
   float: left;
   height: 50vh;
-  left: 5vw;
-  margin-left: 1%;
-  min-width: 515px;
+  left: 5%;
+  margin-top: 5%;
+  min-width: 50vw;
   position: absolute;
   top: 5vh;
-  width: 50vw;
+  width: 55vw;
 }
 
 .font1 {
@@ -53,7 +59,7 @@ $num-boxes: 12;
 }
 
 .font2 {
-   font-family: 'Abel', sans-serif;
+  font-family: 'Abel', sans-serif;
 }
 
 .font3 {
@@ -61,14 +67,46 @@ $num-boxes: 12;
 }
 
 .font4 {
+  color: $black;
+  display: inline-block;
   font-family: 'Carrois Gothic', sans-serif;
+}
+
+.intro{
+  // background: $white;
+  color: $black;
+  font-size: 1.35rem;
+  line-height: 1.95rem;
+  margin: 5% 15%;
+  width: 70%;
+  min-width: 50%;
+  padding: 10px;
+  text-align: left;
+}
+
+.tag {
+  margin: 0 15%;
+  width: 70%;
+  min-width: 50%;
+  padding: 10px;
+  text-align: left;
+  font-size: 1.15rem;
+}
+
+.intro2 {
+  margin: 0% 0%;
+  width: 50%;
+  min-width: 50%;
+  padding: 10px;
+  text-align: center;
+
 }
 
 .tag5 {
   float: left;
   font-size: 1.35rem;
-  line-height: 2.3rem;
-  margin: 0;
+  line-height: 1.35rem;
+  margin-bottom: 0.75rem;
   padding: 0;
   text-align: left;
   text-transform: lowercase;
@@ -76,7 +114,6 @@ $num-boxes: 12;
 
 .tag4 {
   font-size: 2.2rem;
-  line-height: 2.3rem;
   margin: 0;
   margin-top: 1rem;
   padding: 0;
@@ -85,21 +122,26 @@ $num-boxes: 12;
 }
 
 a.hover:hover {
-  background: $trans-black;
-  // border-bottom: solid 5px;
-  // border-color: $trans-black;
+  // background: $trans-black;
+  border-bottom: solid 4px;
+  border-color: $black;
   // border-bottom: none;
-  color: $white;
-  transition: 0.25s;
+  // color: $white;
+  transition: 0.5s;
 }
 
 a.hover {
-  margin: 0;
-  padding: 0;
-  margin: .5rem .2rem;
-  margin-top: .5rem;
-  padding: .4rem;
+  margin: .5rem;
+  padding: 0px;
+  line-height: 3rem;
+}
 
+a.hover2:hover {
+border-bottom: solid 4px;
+  border-color: $black;
+  // border-bottom: none;
+  // color: $white;
+  transition: 0.5s;
 }
 
 .container1,
@@ -111,6 +153,15 @@ a.hover {
   width: 100%;
 }
 
+.test1{
+  background: $white;
+  height: 50px;
+}
+
+.row {
+  margin: 0 auto;
+}
+
 .container2 {
   background: $green;
 }
@@ -119,8 +170,25 @@ a.hover {
   background: $yellow;
 }
 
+.border-med {
+  border: 4px solid $black;
+  margin: 10px auto;
+  padding: .5rem;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+}
+
+.border-sm {
+  border: 2px solid $black;
+  margin: 10px auto;
+  padding: .5rem;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
 body {
   background-color: $nth-bg;
+  text-rendering: optimizeLegibility;
 }
 
 .box {
@@ -165,7 +233,7 @@ a {
 
   25%,50% {
     bottom: -100%;
-    transform: translateY(900%);
-    opacity: 0.05;
+    transform: translateY(875%);
+    opacity: 0.01;
   }
 }

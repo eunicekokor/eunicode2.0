@@ -1,9 +1,17 @@
 meta:
-  title: "Eunicode"
-  description: "hello world"
+  title: "Eunice Kokor | Software Engineer"
+  description: "this is eunicode, Eunice Kokor's website (:"
   twitter_handle: "eunicekokor"
   domain: "eunicod.es"
   url: "http://eunicod.es"
-  image: "ek-wallpaper.png"
-  twitter_image: "ek-wallpaper.png"
-  facebook_image: "ek-wallpaper.png"
+  image: "meta/ek-wallpaper.png"
+  twitter_image: "meta/ek-wallpaper.png"
+  facebook_image: "meta/ek-wallpaper.png"
+
+food:
+  - name: "Frothy Matcha Latte"
+    location: "Deluxe Cafe, NYC"
+    url: "/img/food/IMG_0748.jpg"
+  - name: "Oatmeal w/ Flax Seeds, Blueberries, Crushed Almonds & Cinnamon"
+    location: "Home"
+    url: "/img/food/IMG_1921.jpg"

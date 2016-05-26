@@ -1,5 +1,6 @@
 $white: #FFFFFF;
-$black: #252525;
+$black1: #252525;
+$black: lighten($black1, 10%);
 $lightpink: rgb(255, 204, 204);
 $mediumpink: rgb(255, 153, 153);
 $darkpink: rgb(255, 102, 102);

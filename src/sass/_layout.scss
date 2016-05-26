@@ -1,10 +1,19 @@
 $content-width: 58.75rem;
+$padding-col: 0.625rem;
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 .content {
   @include clearfix;
   margin: 0 auto;
   max-width: $content-width;
-  padding: 0 0.625rem;
+  padding: 0 $padding-col;
   width: 90%;
 }
 
@@ -14,7 +23,6 @@ $content-width: 58.75rem;
   width: 100%;
 }
 
-//-- our cleafix hack -- //
 .row::before,
 .row::after {
   clear: both;
@@ -26,9 +34,11 @@ $content-width: 58.75rem;
   float: left;
   min-height: 1px;
   width: 16.66%;
-  //-- our gutter -- //
-    // background-color: #FFDCDC;
-  }
+}
+
+.padded-col {
+  padding: 0 $padding-col;
+}
 
 .col-1 {
   width: 16.66%;
@@ -54,49 +64,16 @@ $content-width: 58.75rem;
   width: 100%;
 }
 
-@media screen and (max-width: $phone-landscape-max) {
-  .content {
-    padding: 0;
+// Tablets
+@media (max-width: $tablet-landscape-min) {
+  [class*='column-'] {
     width: 100%;
-  }
-
-  section {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
   }
 }
 
-@media all and (max-width:800px) {
-  .col-1 {
+// Mobile Devices
+@media (max-width: $phone-portrait-max) {
+  [class*='column-'] {
     width: 100%;
   }
-
-  .col-2 {
-    width: 100%;
-   }
-
-  .col-3 {
-    width: 100%;
-  }
-
-  .col-4 {
-    width: 100%;
-  }
-
-  .col-5 {
-    width: 100%;
-  }
-
-  .col-6 {
-    width: 100%;
-  }
-
-  .row .col-2:last-of-type {
-    width: 100%;
-  }
-
-  .row .col-5 ~ .col-1 {
-    width: 100%;
-  }
-
 }

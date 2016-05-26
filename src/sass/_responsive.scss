@@ -24,6 +24,11 @@
   body {
     font-size: 15px;
   }
+
+  .name-title {
+    font-size: 4rem;
+    line-height: 3.5rem;
+  }
 }
 
 @media screen and (min-width: $tablet-portrait-min) {
@@ -38,12 +43,13 @@
     font-size: 14px;
   }
 
-  .next-pg {
-    margin-top: 30%;
-  }
-
   .hide-mobile {
     display: none;
+  }
+
+  .name-title {
+    font-size: 3rem;
+    line-height: 2.5rem;
   }
 }
 
@@ -54,13 +60,45 @@
   }
 
   .name {
-    float: top;
-    height: 40vh;
-    min-width: 80vw;
-    right: 10%;
-    top: 15%;
-    width: 80vw;
+    float: bottom;
+    height: 30vh;
+    min-width: 50vw;
+    left: 10%;
+    top: 55%;
+    width: 50vw;
+    background-color: $trans-black;
   }
+
+  .text-contain {
+  // background-color: $green;
+  // display: none;
+  float: left;
+  height: 50vh;
+  left: 0%;
+  min-width: 100vw;
+  margin-left: -10%;
+  position: absolute;
+  text-align: left;
+  top: 5vh;
+  width: 100vw;
+}
+.intro {
+  width: 80%;
+  min-width: 80%;
+}
+
+.border-med {
+  border: 4px solid $black;
+  margin: 0px auto;
+  padding: .5rem;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+}
+
+.intro {
+  text-align: left;
+}
+
 }
 
 @media screen and (max-width: $flip-phone-max) {

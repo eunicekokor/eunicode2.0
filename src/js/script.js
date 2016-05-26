@@ -1,7 +1,7 @@
 
 $(document).ready(function() {
   var white = '#fff';
-  var black = '#252525';
+  var black = '#3f3f3f';
   var gray = 'rgb(128, 128, 128)';
   var lightpink = 'rgb(255, 204, 204)';
   var mediumpink = 'rgb(255, 153, 153)';
@@ -17,11 +17,12 @@ $(document).ready(function() {
   var yellow = '#ff0';
   var inactive = '1.35rem';
   var active = '2.0rem';
+  var selected = '.welcome';
 
   var colorList = [transyellow, transblack, transteal, transpurp, transgreen, transred];
   var boxList = [lightpink, darkpink, lightpink, mediumpink, lightpink, darkpink];
   var titleList = [black, black, white, white, black, white];
-  var accentList = [darkpink, darkpink, black, black, white, black];
+  var accentList = [mediumpink, darkpink, mediumpink, mediumpink, white, lightpink];
 
   var rand = Math.floor(Math.random() * colorList.length);
 
@@ -165,6 +166,89 @@ $(document).ready(function() {
         this.style.webkitAnimationPlayState = 'paused';
       });
     });
+
+    $('#eat').click(function() {
+      $(selected).hide();
+      selected = '.eat';
+      $(selected).show();
+    });
+
+    $('#eat1').click(function() {
+      $(selected).hide();
+      selected = '.eat';
+      $(selected).show();
+    });
+    $('#eat2').click(function() {
+      $(selected).hide();
+      selected = '.eat';
+      $(selected).show();
+    });
+    $('#eat3').click(function() {
+      $(selected).hide();
+      selected = '.eat';
+      $(selected).show();
+    });
+    $('#eat4').click(function() {
+      $(selected).hide();
+      selected = '.eat';
+      $(selected).show();
+    });
+
+    $('#write').click(function() {
+      $(selected).hide();
+      selected = '.write';
+      $(selected).show();
+    });
+
+    $('#write1').click(function() {
+      $(selected).hide();
+      selected = '.write';
+      $(selected).show();
+    });
+    $('#write2').click(function() {
+      $(selected).hide();
+      selected = '.write';
+      $(selected).show();
+    });
+    $('#write3').click(function() {
+      $(selected).hide();
+      selected = '.write';
+      $(selected).show();
+    });
+    $('#write4').click(function() {
+      $(selected).hide();
+      selected = '.write';
+      $(selected).show();
+    });
+
+    $('#code').click(function() {
+      $(selected).hide();
+      selected = '.code';
+      $(selected).show();
+    });
+
+    $('#code1').click(function() {
+      $(selected).hide();
+      selected = '.code';
+      $(selected).show();
+    });
+    $('#code2').click(function() {
+      $(selected).hide();
+      selected = '.code';
+      $(selected).show();
+    });
+    $('#code3').click(function() {
+      $(selected).hide();
+      selected = '.code';
+      $(selected).show();
+]    });
+    $('#code4').click(function() {
+      $(selected).hide();
+      selected = '.code';
+      $(selected).show();
+]    });
+
+
 
   }
 

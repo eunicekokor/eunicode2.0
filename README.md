@@ -1,7 +1,7 @@
-DevFest 2016
+Eunicode 2016
 ========================================
 
-The DevFest 2016 Website is built using [Gulp][gulp], [Handlebars.js][handlebars], and [SCSS][scss].
+Eunice's personal website using [Gulp][gulp], [Handlebars.js][handlebars], and [SCSS][scss].
 
 ## Setup
 
@@ -47,7 +47,7 @@ Runs `gulp watch` in the background, and serves the `dist` directory at `localho
 
 ### `gulp deploy`
 
-For use by the ADICU team only.  Deploys to `2016.devfe.st`, but won't do so without proper authentication.
+For use by Eunice Kokor only.  Deploys to `eunicod.es`, but won't do so without proper authentication.
 
 ## Structure
 
