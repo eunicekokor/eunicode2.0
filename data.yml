@@ -1,12 +1,9 @@
 meta:
-  title: "Eunice Kokor | Software Engineer"
-  description: "this is eunicode, Eunice Kokor's website (:"
+  title: "Eunicode"
+  description: "hello world"
   twitter_handle: "eunicekokor"
   domain: "eunicod.es"
   url: "http://eunicod.es"
-  image: "meta/ek-wallpaper.png"
-  twitter_image: "meta/ek-wallpaper.png"
-  facebook_image: "meta/ek-wallpaper.png"
 
 food:
   - name: "Frothy Matcha Latte"
@@ -15,3 +12,6 @@ food:
   - name: "Oatmeal w/ Flax Seeds, Blueberries, Crushed Almonds & Cinnamon"
     location: "Home"
     url: "/img/food/IMG_1921.jpg"
+  - name: "Brunch w. Creme Fresh Pancakes"
+    location: "Berkeley, CA"
+    url: "/img/food/IMG_4303.jpg"

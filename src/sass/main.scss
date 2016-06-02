@@ -17,12 +17,12 @@ $num-boxes: 12;
   display: none;
 }
 .name {
-  top: 15%;
+  top: 60%;
   // background: $yellow;
-  min-width: 35vw;
+  min-width: 32.5vw;
   position: fixed;
-  right: 5%;
-  width: 35vw;
+  right: 0%;
+  width: 30vw;
 }
 
 .stylefix {
@@ -31,9 +31,9 @@ $num-boxes: 12;
 
 .name-title {
   font-family: 'Archivo Black', sans-serif;
-  font-size: 5rem;
+  font-size: 3.8rem;
   left: 0;
-  line-height: 4.3rem;
+  line-height: 3.5rem;
   margin: 0.5rem 0.4rem;
   padding: 0;
   vertical-align: center;
@@ -105,8 +105,8 @@ $num-boxes: 12;
 .tag5 {
   float: left;
   font-size: 1.35rem;
-  line-height: 1.35rem;
-  margin-bottom: 0.75rem;
+  line-height: 1.05rem;
+  margin-bottom: 0.35rem;
   padding: 0;
   text-align: left;
   text-transform: lowercase;
@@ -121,6 +121,16 @@ $num-boxes: 12;
   text-transform: lowercase;
 }
 
+p span
+{
+    display: block;
+
+}
+
+// span:before {
+//     content:"• ";
+// }
+
 a.hover:hover {
   // background: $trans-black;
   border-bottom: solid 4px;
@@ -133,7 +143,7 @@ a.hover:hover {
 a.hover {
   margin: .5rem;
   padding: 0px;
-  line-height: 3rem;
+  line-height: 2.15rem;
 }
 
 a.hover2:hover {

@@ -1,0 +1,50 @@
+{{#extend "base"}}
+{{#content "main" mode="prepend"}}
+
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+
+<div class="text-contain eat">
+  <center>
+    <p class="font4 border-med">eat</p>
+    <br><br>
+    <div class="tag4 font4">
+      <a class="page hover" id="eat" href="/eat.html"><i class="fa fa-cutlery" aria-hidden="true"></i></a>
+      <a class="page hover" id="write" href="/write.html"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+      <a class="page hover" id="code" href="/code.html"><i class="fa fa-terminal" aria-hidden="true"></i></a>
+    </div>
+    <br><br>
+  </center>
+
+  <p class="font1 intro">
+   One thing I <span class="font3">love love love</span><br>
+   when I go to new places <br>
+   is finding its <a target="_blank" class="hover2" href="https://foursquare.com/eunicekokor/list/todos">coolest cuisines</a> <br>
+   I also enjoy<br>
+   rolling up my sleeves, <br>
+   whipping out my kitchen chops, <br>
+   and making something interesting myself (:</p>
+
+   <p class="font1 intro"> scroll to view <br> and stay tuned for more! </p>
+   {{#each food}}
+   <img class="intro" src="{{this.url}}">
+   <p class="font1 tag"><i class="fa fa-cutlery" aria-hidden="true"></i> {{this.name}}<br>
+    <i class="fa fa-map-marker" aria-hidden="true"></i> {{this.location}}
+  </p>
+  {{/each}}
+
+  <center><h1 class="name-title mobile-only">eunice<br>kokor</h1></center>
+</div>
+
+{{/content}}
+{{/extend}}

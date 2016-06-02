@@ -47,9 +47,25 @@
     display: none;
   }
 
+  .text-contain {
+  // background-color: $green;
+  // display: none;
+  height: 50vh;
+  left: 0%;
+  min-width: 100vw;
+  margin: 0 auto;
+  position: absolute;
+  text-align: left;
+  top: 5vh;
+  width: 100vw;
+}
+
   .name-title {
     font-size: 3rem;
-    line-height: 2.5rem;
+    line-height: 3.5rem;
+    text-align:center;
+    margin: 0 auto;
+    width: 80vw;
   }
 }
 
@@ -72,11 +88,10 @@
   .text-contain {
   // background-color: $green;
   // display: none;
-  float: left;
   height: 50vh;
   left: 0%;
   min-width: 100vw;
-  margin-left: -10%;
+  margin: 0 auto;
   position: absolute;
   text-align: left;
   top: 5vh;
