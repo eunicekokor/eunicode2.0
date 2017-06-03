@@ -1,4 +1,7 @@
 {
-      "preset": "airbnb",
-        "disallowMultipleSpaces": true
+  "disallowMultipleSpaces": true,
+  "maximumLineLength": 150,
+  "requireSpacesInFunctionExpression": {
+    "beforeOpeningCurlyBrace": true
+  }
 }

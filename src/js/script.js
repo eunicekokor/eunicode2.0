@@ -28,21 +28,21 @@ $(document).ready(function() {
 
   $('body').css('background-color', colorList[rand]);
   $('a').css('color', accentList[rand]);
-  $('.nohover').animate({color: accentList[rand]}, 'slow');
+  $('.nohover').animate({ color: accentList[rand] }, 'slow');
   $('.name-title').css('color', titleList[rand]);
   $('.box').css('background-color', boxList[rand]);
 
   getNew();
   onClickFxns();
 
-  $('#resume').animate({'font-size': active}, 1000, function() {
+  $('#resume').animate({ 'font-size': active }, 1000, function() {
     setTimeout(function() {
-      $('#dist-free').animate({'font-size': active}, 1500);
-      $('#resume').animate({'font-size': inactive}, 1500, function() {
+      $('#dist-free').animate({ 'font-size': active }, 1500);
+      $('#resume').animate({ 'font-size': inactive }, 1500, function() {
         pause();
         setTimeout(function() {
-          $('#dist-free').animate({'font-size': inactive}, 1000);
-          $('#resume').animate({'font-size': active}, 1000, function() {
+          $('#dist-free').animate({ 'font-size': inactive }, 1000);
+          $('#resume').animate({ 'font-size': active }, 1000, function() {
             resume();
           });
         }, 2000);
@@ -50,21 +50,21 @@ $(document).ready(function() {
     }, 2000);
   });
 
-  $('#norm').animate({'font-size': active}, 1000, function() {
+  $('#norm').animate({ 'font-size': active }, 1000, function() {
     setTimeout(function() {
-      $('#slow').animate({'font-size': active}, 1500);
-      $('#norm').animate({'font-size': inactive}, 1500, function() {
+      $('#slow').animate({ 'font-size': active }, 1500);
+      $('#norm').animate({ 'font-size': inactive }, 1500, function() {
         slow();
         setTimeout(function() {
-          $('#slow').animate({'font-size': inactive}, 1000);
-          $('#fast').animate({'font-size': active}, 1000, function() {
+          $('#slow').animate({ 'font-size': inactive }, 1000);
+          $('#fast').animate({ 'font-size': active }, 1000, function() {
             fast();
           });
         }, 2000);
 
         setTimeout(function() {
-          $('#fast').animate({'font-size': inactive}, 1000);
-          $('#norm').animate({'font-size': active}, 1000, function() {
+          $('#fast').animate({ 'font-size': inactive }, 1000);
+          $('#norm').animate({ 'font-size': active }, 1000, function() {
             norm();
           });
         }, 4000);
